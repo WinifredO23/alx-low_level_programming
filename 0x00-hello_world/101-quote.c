@@ -3,16 +3,11 @@
 /**
  * main - Entry point of the program
  *
- * Description: Prints a message and that piece of art is useful..
+ * Description: Prints a message exactly
  * Return: Always 1
  */
 int main(void)
 {
-	char *message = "and that piece of art is useful\"
-			-Dora Korpar, 2015-10-19\n";
-	int length = 51;
-
-	write(2, message, length);
-
+	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 51);
 	return (1);
 }
