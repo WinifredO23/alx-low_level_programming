@@ -1,30 +1,31 @@
 #include <stdio.h>
 /**
- * main	- Entry point of program
+ * main - Entry point of program
  *
- * Description:	Print combo three
+ * Description: Print combo three
  * Return: Always o (Sucess);
  */
 int main(void)
 {
-	int a, b, c;
+	int e, f, g;
 
-	for (a = 0; a <= 7; a++)
+	for (e = '0'; e <= '7'; e++)
 	{
-		for (b = a + 1; b <= 8; b++)
-		{
-			for (c = b + 1; b <= 9; c++)
-			{
-				putchar('0' + a);
-				putchar('0' + b);
-				putchar('0' + c);
-				if (a != 7 || b != 8 || c != 9)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-		}
+	for (f = e + 1; f <= '8'; f++)
+	{
+	for (g = f + 1; g <= '9'; g++)
+	{
+	if ((f != e) != g)
+	{
+	putchar(e);
+	putchar(f);
+	putchar(g);
+
+	putchar(',');
+	putchar(' ');
+	}
+	}
+	}
 	}
 	putchar('\n');
 	return (0);
