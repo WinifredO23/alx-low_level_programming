@@ -9,11 +9,9 @@
  */
 int main(void)
 {
-	int min = -100;
-	int max = 100;
 	int n;
 
-	n = (rand() % (max - min + 1)) + min;
+	n = rand() - RAND_MAX / 2;
 	srand(time(0));
 	printf("%d is",	 n);
 	if (n > 0)
