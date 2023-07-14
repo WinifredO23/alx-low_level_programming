@@ -9,13 +9,13 @@
  */
 int main(void)
 {
-	int min = -1000;
-	int max = 1000;
+	int min = -100;
+	int max = 100;
 	int n;
 
 	n = (rand() % (max - min + 1)) + min;
 	srand(time(0));
-	printf("number %d is", n);
+	printf("%d is",	 n);
 	if (n > 0)
 	{
 		printf("postive\n");
