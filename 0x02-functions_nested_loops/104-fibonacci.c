@@ -7,19 +7,31 @@
  */
 int main(void)
 {
-	unsigned long a = 1;
-	unsigned long b = 2;
-	unsigned long c;
-	int i;
+	unsigned long int  a, b, c, b1, b2, c1, c2;
 
-	printf("%lu", a);
+	b = 1;
+	c = 2;
 
-	for (i = 1; i < 98; i++)
+	printf("%lu", b);
+
+	for (a = 1; a < 91; a++)
 	{
-		printf(", %lu", b);
-		c = a + b;
-		a = b;
-		b = c;
+		printf(", %lu", c);
+		c = c + b;
+		b = c - b;
+	}
+	b1 = b / 1000000000;
+	b2 = b % 1000000000;
+	c1 = c1 / 1000000000;
+	b1 = c2 % 1000000000;
+	for (a = 92; a < 99; a++)
+	{
+	printf(", %lu", c1 + (c2 / 1000000000));
+	printf("%lu", c2 % 1000000000);
+	c1 = c1 + b1;
+	b1 = c1 - b1;
+	c2 = c2 + b2;
+	b2 = c2 - b2;
 	}
 	printf("\n");
 	return (0);
