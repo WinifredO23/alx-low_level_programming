@@ -16,10 +16,8 @@ int main(void)
 	{
 	h += j;
 	if (h % 2 == 0)
-	{
-		sum += h;
-		j = h - j;
-	}
+	sum += h;
+	j = h - j;
 	++f;
 	}
 	printf("%ld\n", sum);
