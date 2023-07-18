@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * Print alphabet
+ * print_alphabet - alphabet is in Lc
  *
  * Description:	prints in lowercase
  * Return: Void
