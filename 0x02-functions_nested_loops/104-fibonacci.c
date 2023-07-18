@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - Entry point of the program
- * Description:	Prints the first 98 f no
+ * Description: Prints the first 98 f no
  *
  * Return: Always 0
  */
