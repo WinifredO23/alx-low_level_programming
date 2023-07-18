@@ -12,13 +12,12 @@ int main(void)
 	unsigned long c;
 	int i;
 
-	printf("%lu, %lu", a, b);
+	printf("%lu, %lu", a);
 
-	for (i = 2; i < 98; i++)
+	for (i = 1; i < 98; i++)
 	{
+		printf(", %lu", b);
 		c = a + b;
-		printf(", %lu", c);
-
 		a = b;
 		b = c;
 	}
