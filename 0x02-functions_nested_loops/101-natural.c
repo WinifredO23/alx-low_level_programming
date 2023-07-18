@@ -12,7 +12,7 @@ int main(void)
 
 	for (N = 0; N < 1024; N++)
 	{
-	if ((num % 3 == 0) || (num % 5 == 0))
+	if ((N % 3 == 0) || (N % 5 == 0))
 	{
 		sum += N;
 	}
