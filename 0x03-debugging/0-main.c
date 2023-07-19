@@ -1,10 +1,13 @@
 #include "main.h"
+
 /**
  * main -Test function that prints if the interger is positive or negative
  * Return: 0
  */
 int main(void)
+
 {
+
 	int i;
 
 	i = 0;
