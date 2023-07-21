@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_number -Prints integer
- * @n:	The integer
+ * print_numbers - Print integer
+ * @n:	The integer to be printed
  * Return: 0
  */
 void print_number(int n)
@@ -13,7 +13,7 @@ void print_number(int n)
 	{
 	n *= -1;
 	i = n;
-	_putchar('_');
+	_putchar('-');
 	}
 	i /= 10;
 	if (i != 0)
