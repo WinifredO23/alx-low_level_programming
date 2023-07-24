@@ -16,9 +16,9 @@ int main(void)
 	
 	for (s = 0; s <= 2645; s += a)
 	{
-		a = rand() % 128
+		a = rand() % 128;
 		putchar(a);
 	}
-	putchar(2772 - s)
+	putchar(2772 - s);
 	return (0);
 }
