@@ -10,10 +10,10 @@
 int main(void)
 {
 	int p_length = 10;
+	int a;
 
 	srand(time(NULL));
 	
-	int a;
 	char *p = (char *)malloc((p_length + 1) * sizeof(char));
 	const char  set[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	int set_size = sizeof(set) - 1;
