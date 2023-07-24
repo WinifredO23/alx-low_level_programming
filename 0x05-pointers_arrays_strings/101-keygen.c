@@ -4,27 +4,21 @@
 /**
  * main - Entry point of the program
  *
- * Description:	Generates random passwords
- * Return: Always 0 (Sucess);
+ * Description: Generates random passwords
+ * Return: Always 0 (Success);
  */
 int main(void)
 {
-	int p_length = 10;
+	int s;
 	int a;
-	char *p = (char *)malloc((p_length + 1) * sizeof(char));
-	const char  set[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-	int set_size = sizeof(set) - 1;
 
 	srand(time(NULL));
-
-	for (a = 0; a < p_length; a++)
+	
+	for (s = 0; s <= 2645; s += a)
 	{
-	int random_index = rand() % set_size;
-	p[a] = set[random_index];
+		a = rand() % 128
+		putchar(a);
 	}
-	p[p_length] = '\0';
-	printf("Password: %s\n", p);
-	free(p);
+	putchar(2772 - s)
 	return (0);
 }
-
