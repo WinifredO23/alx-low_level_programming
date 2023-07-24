@@ -12,11 +12,11 @@ int main(void)
 	srand(time(NULL));
 	
 	int p_length = 10;
+	int a;
 	char *p = (char *)malloc((p_length + 1) * sizeof(char));
 	const char  set[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	int set_size = sizeof(set) - 1;
 
-	int a;
 	for (a = 0; a < p_length; a++)
 	{
 	int random_index = rand() % set_size;
