@@ -7,12 +7,13 @@
 void puts_half(char *str)
 {
 	int c = 0;
-	int n = (c - 1) / 2;
+	int n;
 
 	for (c = 0; str[c] != '\0'; c++)
 	;
 	if (c % 2 == 1)
 	{
+	n = (c - 1) / 2;
 	n += 1;
 	}
 	else
