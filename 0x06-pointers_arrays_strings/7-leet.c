@@ -4,7 +4,7 @@
  * @str: String of letters to replace
  * Return: Str
  */
-char *leet(char *str) 
+char *leet(char *str)
 {
 	char a[] = "aAeEoOtTlL";
 	char b[] = "443300771i";
