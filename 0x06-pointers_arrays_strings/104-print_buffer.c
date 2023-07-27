@@ -49,6 +49,6 @@ print_line(b, s % 10 - 1, i);
 }
 putchar('\n');
 }
-if (size == 0)
+if (s == 0)
 putchar('\n');
 }
