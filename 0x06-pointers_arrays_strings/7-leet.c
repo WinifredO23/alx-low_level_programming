@@ -1,25 +1,24 @@
 #include "main.h"
 /**
  * leet - Encode into 1337
- * @str: Input v
+ * @f: Input v
  * Return: Str
  */
-char *leet(char *str)
+char *leet(char *f)
 {
 	char a[] = "aAeEoOtTlL";
 	char b[] = "443300771i";
-	int i;
-	int j;
+	int i, j;
 
 	for (i = 0; *(str + i); i++)
 	{
 	for (j = 0; j <= 9; j++)
 	{
-	if (str[i] == a[j])
+	if (f[i] == a[j])
 	{
-	str[i] = b[j];
+	f[i] = b[j];
 	}
 	}
 	}
-	return (str);
+	return (f);
 }
