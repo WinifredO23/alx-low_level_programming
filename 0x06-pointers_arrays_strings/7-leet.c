@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * leet - Replaces letters with num
- * @str: String of letters to replace
+ * leet - Encode into 1337
+ * @str: Input v
  * Return: Str
  */
 char *leet(char *str)
