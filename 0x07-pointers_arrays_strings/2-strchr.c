@@ -5,8 +5,7 @@
  * @s: Pointer to the string to search.
  * @c: The character to locate in the string.
  *
- * Return: Pointer to the first occurrence of the character @c in the string @s,
- *         or NULL if the character is not found.
+ * Return: Null
  */
 char *_strchr(char *s, char c)
 {
@@ -14,8 +13,8 @@ char *_strchr(char *s, char c)
 
 	while (s[i] >= '\0')
 	{
-		if (s[i] == c)
-			return &s[i];
+	if (s[i] == c)
+	return (&s[i]);
 		i++;
 	}
 	return (NULL);
