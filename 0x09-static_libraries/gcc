@@ -1,0 +1,1 @@
+-c 0-memset.c -o 0-memset.o
