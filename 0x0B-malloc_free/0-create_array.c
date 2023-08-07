@@ -4,7 +4,7 @@
  * create_array - creates arrays
  * @size: Size of array
  * @c: char to be filled
- * Return: array filed or Null 
+ * Return: array filed or NULL
  */
 char *create_array(unsigned int size, char c)
 {
@@ -16,7 +16,7 @@ char *create_array(unsigned int size, char c)
 	return (NULL);
 	}
 	arr = (char *)malloc(size * sizeof(char));
-	
+
 	if (arr == 0)
 	{
 	return (NULL);
