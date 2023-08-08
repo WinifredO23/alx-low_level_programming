@@ -49,22 +49,10 @@ char **strtow(char *str)
 
 	num_words = count_words(str);
 	words = (char **)malloc((num_words + 1) * sizeof(char *));
-	if (words == NULL)
+	if (words == 0)
 	return (NULL);
 	index = 0;
 	i = 0;
-	if (count_words(str) == 0)
-    {
-        words[0] = (char *)malloc(1 * sizeof(char));
-        if (words[0] == NULL)
-        {
-            free(words);
-            return (NULL);
-        }
-        words[0][0] = '\0';
-        words[1] = NULL;
-        return (words);
-    }
 	while (str[i] != '\0')
 	{
 		while (is_space(str[i]))
