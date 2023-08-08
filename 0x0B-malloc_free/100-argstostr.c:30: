@@ -1,0 +1,4 @@
+rgstostr.c:30: WARNING: please, no spaces at the start of a line
+100-argstostr.c:34: ERROR: trailing whitespace
+100-argstostr.c:52: WARNING: More than 40 lines in a function
+100-argstostr.c:53: WARNING: More than 40 lines in a function
