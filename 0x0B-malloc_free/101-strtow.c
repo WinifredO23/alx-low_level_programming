@@ -2,13 +2,20 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * is_space - Checks if a character is a space, tab, or newline.
+ * is_space - locates a by marking end.
  * @c: The character to check.
  * Return: 1 if character is a space, tab, or newline; 0 otherwise.
  */
-int is_space(char c)
+int is_space(char *c)
 {
-	return (c == ' ' || c == '\t' || c == '\n');
+	int a = 0, l = 0;
+
+	while (*(c + a) && *(c + a) != ' ')
+	{
+		l++;
+		a++;
+	}
+	return (l);
 }
 /**
  * count_words - Counts the number of words in a string.
@@ -17,23 +24,22 @@ int is_space(char c)
  */
 int count_words(char *str)
 {
-	int c = 0;
-	int i = 0;
+	int a = 0;
+	int num_words = 0;
+	int l = 0;
 
-	while (str[i] != '\0')
+	for (a = 0; *(str + a); a++)
+		l++;
+	for (a = 0; a < l; a++)
 	{
-	while (is_space(str[i]))
-		i++;
-	if (str[i] != '\0')
+	if (*(str + a) != ' ')
 	{
-	c++;
-	while (!is_space(str[i]) && str[i] != '\0')
-	i++;
+		num_words++;
+		a += is_space(str + a);
 	}
 	}
-	return (c);
+	return (num_words);
 }
-
 /**
  * strtow - Splits a string into words
  * @str: Input string
@@ -41,43 +47,44 @@ int count_words(char *str)
  */
 char **strtow(char *str)
 {
-	int num_words, index, i, j, s, length;
+	int num_words, a, i, j, len;
 	char **words;
 
-	if (str == NULL || *str == '\0')
+	a = 0;
+
+	if (str == NULL || str[0]  == '\0')
 		return (NULL);
 
 	num_words = count_words(str);
-	words = (char **)malloc((num_words + 1) * sizeof(char *));
-	if (words == 0)
+	if (num_words == 0)
 	return (NULL);
-	index = 0;
-	i = 0;
-	while (str[i] != '\0')
+
+	words = (char **)malloc((num_words + 1) * sizeof(char *));
+	if (words == NULL)
+	return (NULL);
+
+	for (i = 0; i < num_words; i++)
 	{
-		while (is_space(str[i]))
-			i++;
-		if (str[i] != '\0')
+		while (str[a] == ' ')
+			a++;
+		len = is_space(str + a);
+		words[i] = malloc((len + 1) * sizeof(char));
+		if (words[i] == NULL)
 		{
-			s = i;
-			while (!is_space(str[i]) && str[i] != '\0')
-				i++;
-			length = i - s;
-			words[index] = (char *)malloc((length + 1) * sizeof(char));
-			if (words[index] == NULL)
-			{
-				for (j = 0; j < index; j++)
-					free(words[j]);
-				free(words);
-				return (NULL);
-			}
-			for (j = 0; j < length; j++)
-				words[index][j] = str[s + j];
-			words[index][length] = '\0';
-			index++;
+			for (; i >= 0; i--)
+				free(words[i]);
+			free(words);
+			return (NULL);
 		}
+		for (j = 0; j < len; j++)
+		{
+			words[i][j] = str[a];
+			a++;
+		}
+
+		words[i][j] = '\0';
 	}
-	words[index] = NULL;
+	words[i] = NULL;
 	return (words);
 }
 
