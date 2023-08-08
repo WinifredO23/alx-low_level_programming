@@ -8,7 +8,7 @@
  */
 int is_space(char c)
 {
-	return (c == ' ' || c == '\t' || c == '\n');
+	return ((c == ' ' || c == '\t' || c == '\n'));
 }
 /**
  * count_words - Counts the number of words in a string.
@@ -24,7 +24,9 @@ int count_words(char *str)
 	while (str[i] != '\0')
 	{
 	while (is_space(str[i]))
-			i++;
+	{
+	i++;
+	}
 	if (str[i] != '\0')
 	{
 	c++;
@@ -32,7 +34,7 @@ int count_words(char *str)
 	i++;
 	}
 	}
-	return c;
+	return (c);
 }
 /**
  * strtow - Splits a string into words.
@@ -51,11 +53,15 @@ char **strtow(char *str)
 	int j;
 
 	if (str == NULL || *str == '\0')
-		return NULL;
+	{
+		return (NULL);
+	}
 	num_words = count_words(str);
 	words = (char **)malloc((num_words + 1) * sizeof(char *));
 	if (words == NULL)
-		return NULL;
+	{
+		return (NULL);
+	}
 
 	index = 0;
 	i = 0;
@@ -63,7 +69,9 @@ char **strtow(char *str)
 	while (str[i] != '\0')
 	{
 		while (is_space(str[i]))
+		{
 			i++;
+		}
 		if (str[i] != '\0')
 	{
 	s = i;
@@ -76,7 +84,7 @@ char **strtow(char *str)
 	for (j = 0; j < index; j++)
 	free(words[j]);
 	free(words);
-	return NULL;
+	return (NULL);
 	}
 	for (j = 0; j < length; j++)
 	words[index][j] = str[s + j];
@@ -85,5 +93,5 @@ char **strtow(char *str)
 	}
 	}
 	words[num_words] = NULL;
-	return words;
+	return (words);
 }
