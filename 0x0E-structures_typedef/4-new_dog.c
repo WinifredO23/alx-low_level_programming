@@ -3,6 +3,12 @@
 #include <stdlib.h>
 #include <string.h>
 /**
+ * new_dog - Creates a new dog structure.
+ * @name: Name of the dog.
+ * @age: Age of the dog.
+ * @owner: Owner of the dog.
+ * Description: Creates dog structure and allocates memory
+ * Return: Pointer or NULL
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -36,5 +42,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	new_d->age = age;
-	return new_d;
+	return (new_d);
 }
