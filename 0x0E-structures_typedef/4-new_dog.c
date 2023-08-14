@@ -3,6 +3,48 @@
 #include <stdlib.h>
 #include <string.h>
 /**
+ * _strlen - Returns length of string
+ * @s: String to evalauate
+ *
+ * Return: The Length
+ */
+int _strlen(char *s)
+{
+	int b = 0;
+
+	while (s[b] != '\0')
+	{
+		b++;
+	}
+	return (b);
+}
+
+/**
+ * _strcpy- Copies the string pointed
+ * @dest: Pointer to buffer
+ * @src: String to be copied
+ *
+ * Return: Pointer to dest
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int a, j;
+
+	for(a = 0; src[a] != '\0'; a++)
+	;
+
+	for (j = 0; j < a; j++)
+	{
+	dest[j] = src [j];
+	}
+	dest[a] = '\0';
+
+	return (dest);
+}
+
+
+
+/**
  * new_dog - Creates a new dog structure.
  * @name: Name of the dog.
  * @age: Age of the dog.
