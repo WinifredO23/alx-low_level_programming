@@ -23,8 +23,8 @@ int (*get_op_func(char *s))(int, int)
 	if (*(ops[c].op) == *s && *(s + 1) == '\0')
 	{
 	return (ops[c].f);
-	c++;
 	}
+	c++;
 	}
 	return (NULL);
 }

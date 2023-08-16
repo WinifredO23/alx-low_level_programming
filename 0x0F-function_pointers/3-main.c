@@ -10,44 +10,23 @@
  */
 int main(int argc, char *argv[])
 {
-	 int n1;
-	 char *op;
-	 int n2;
-	 int res;
+	int (*operator)(int, int);
 
 	if (argc != 4)
 	{
-		printf("Error\n");
-		return (98);
+	printf("Error\n");
+	exit(98);
 	}
 
-	n1 = atoi(argv[1]);
-	op = argv[2];
-	n2 = atoi(argv[3]);
+	operator = get_op_func(argv[2]);
 
-	if ((*op == '/' || *op == '%') && n2 == 0)
+	if (!operator)
 	{
-		printf("Error\n");
-		return (100);
+	printf("Error\n");
+	exit(99);
 	}
 
-	if (*op == '+')
-		res = op_add(n1, n2);
-	else if (*op == '-')
-		res = op_sub(n1, n2);
-	else if (*op == '*')
-		res = op_mul(n1, n2);
-	else if (*op == '/')
-		res = op_div(n1, n2);
-	else if (*op == '%')
-		res = op_mod(n1, n2);
-	else
-	{
-		printf("Error\n");
-		return (99);
-	}
-
-	printf("%d\n", res);
+	printf("%d\n", operator(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
 
