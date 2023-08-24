@@ -6,7 +6,7 @@
 void free_list(list_t *head)
 {
 	list_t *t;
-	
+
 	if (head == NULL)
 	{
 	return;
