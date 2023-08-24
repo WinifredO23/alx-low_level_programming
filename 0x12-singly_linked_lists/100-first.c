@@ -1,4 +1,5 @@
 #include <stdio.h>
+void print_string(void)__attribute__ ((constructor));
 /**
  * print_string - function prints message
  */
